@@ -1,0 +1,117 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Toolkit Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        transition: all 0.3s ease;
+      }
+      #a11y-toolbar {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      button {
+        margin: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      .high-contrast {
+        background-color: #000;
+        color: #fff;
+      }
+      .underline-links a {
+        text-decoration: underline !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="a11y-toolbar">
+      <button id="increase-font">A+</button>
+      <button id="decrease-font">A-</button>
+      <button id="toggle-contrast">High Contrast</button>
+      <button id="toggle-underline">Underline Links</button>
+    </div>
+
+    <h1>Welcome to the Accessibility Toolkit Demo</h1>
+    <p>This is a sample page to demonstrate the accessibility features.</p>
+    <a href="#">This is a sample link</a>
+
+    <script>
+      const body = document.body;
+      let fontSize = 16;
+      const fontSizeStep = 2;
+      const minFontSize = 12;
+      const maxFontSize = 24;
+
+      function increaseFontSize() {
+        if (fontSize < maxFontSize) {
+          fontSize += fontSizeStep;
+          body.style.fontSize = `${fontSize}px`;
+        }
+      }
+
+      function decreaseFontSize() {
+        if (fontSize > minFontSize) {
+          fontSize -= fontSizeStep;
+          body.style.fontSize = `${fontSize}px`;
+        }
+      }
+
+      function toggleHighContrast() {
+        body.classList.toggle('high-contrast');
+      }
+
+      function toggleUnderlineLinks() {
+        body.classList.toggle('underline-links');
+      }
+
+      document.getElementById('increase-font').addEventListener('click', increaseFontSize);
+      document.getElementById('decrease-font').addEventListener('click', decreaseFontSize);
+      document.getElementById('toggle-contrast').addEventListener('click', toggleHighContrast);
+      document.getElementById('toggle-underline').addEventListener('click', toggleUnderlineLinks);
+
+      // Load saved settings from localStorage
+      function loadSettings() {
+        const savedFontSize = localStorage.getItem('a11y-font-size');
+        if (savedFontSize) {
+          fontSize = parseInt(savedFontSize);
+          body.style.fontSize = `${fontSize}px`;
+        }
+
+        if (localStorage.getItem('a11y-high-contrast') === 'true') {
+          body.classList.add('high-contrast');
+        }
+
+        if (localStorage.getItem('a11y-underline-links') === 'true') {
+          body.classList.add('underline-links');
+        }
+      }
+
+      // Save settings to localStorage
+      function saveSettings() {
+        localStorage.setItem('a11y-font-size', fontSize);
+        localStorage.setItem('a11y-high-contrast', body.classList.contains('high-contrast'));
+        localStorage.setItem('a11y-underline-links', body.classList.contains('underline-links'));
+      }
+
+      // Call loadSettings on page load
+      loadSettings();
+
+      // Save settings when they change
+      ['click', 'touchend'].forEach(evt => {
+        document.getElementById('a11y-toolbar').addEventListener(evt, saveSettings);
+      });
+    </script>
+  </body>
+  </html>
