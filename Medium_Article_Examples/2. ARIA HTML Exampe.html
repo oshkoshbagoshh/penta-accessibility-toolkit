@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARIA Attributes Example</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Accessible Website</h1>
+      <nav aria-label="Main Navigation">
+        <ul role="menubar">
+          <li role="menuitem"><a href="#home">Home</a></li>
+          <li role="menuitem"><a href="#about">About</a></li>
+          <li role="menuitem"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="section-heading">
+        <h2 id="section-heading">Welcome to our site</h2>
+        <p>
+          This is an example of using ARIA attributes for improved
+          accessibility.
+        </p>
+      </section>
+
+      <form role="form" aria-labelledby="form-heading">
+        <h3 id="form-heading">Contact Us</h3>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" aria-required="true" />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" aria-required="true" />
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            aria-describedby="message-tip"
+          ></textarea>
+          <p id="message-tip" class="hidden">
+            Please be concise and clear in your message.
+          </p>
+        </div>
+        <button type="submit" aria-label="Submit the form">Send</button>
+      </form>
+
+      <div role="alert" aria-live="assertive" id="form-status" class="hidden">
+        Your message has been sent successfully!
+      </div>
+
+      <div role="tablist">
+        <button
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel1"
+          id="tab1"
+        >
+          Tab 1
+        </button>
+        <button
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel2"
+          id="tab2"
+        >
+          Tab 2
+        </button>
+      </div>
+      <div role="tabpanel" id="panel1" aria-labelledby="tab1">
+        <p>Content for Tab 1</p>
+      </div>
+      <div role="tabpanel" id="panel2" aria-labelledby="tab2" class="hidden">
+        <p>Content for Tab 2</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 My Accessible Website</p>
+    </footer>
+
+    <script>
+      // This would be expanded in a real application
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        document.getElementById("form-status").classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>
+

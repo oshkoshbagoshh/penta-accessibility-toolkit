@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alternative Text Examples with Real Images</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      .image-container {
+        margin-bottom: 30px;
+      }
+      figcaption {
+        font-style: italic;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Alternative Text Examples with Real Images</h1>
+
+    <section>
+      <h2>1. Informative Image</h2>
+      <div class="image-container">
+        <img
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+          alt="A modern office workspace with a laptop, coffee cup, and notebook on a wooden desk"
+        />
+        <p>
+          This image provides information about a typical modern workspace
+          setup.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Decorative Image</h2>
+      <div class="image-container">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80"
+          alt=""
+          role="presentation"
+        />
+        <p>
+          This decorative image of a beach scene has an empty alt attribute
+          because it's used for ambiance and doesn't convey important
+          information.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Image of Text</h2>
+      <div class="image-container">
+        <img
+          src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+          alt="Neon sign reading 'Trust the process'"
+        />
+        <p>
+          For images of text, the alt text contains the same text as in the
+          image.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Complex Image</h2>
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+          alt="Business team analyzing data on multiple screens in a modern office"
+        />
+        <figcaption>
+          This image shows a business team collaborating on data analysis. A
+          full description of the team's project and findings would be available
+          in a
+          <a href="#">detailed report</a>.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>5. Image Link</h2>
+      <div class="image-container">
+        <a href="https://www.example.com">
+          <img
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+            alt="Smiling woman with short hair - Click to visit our team page"
+          />
+        </a>
+        <p>
+          For linked images, the alt text describes both the image content and
+          the link destination.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Video Content</h2>
+      <figure>
+        <video controls width="100%">
+          <source
+            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+            type="video/webm"
+          />
+          <source
+            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>
+          Video showing a flower blooming. This is a sample video to demonstrate
+          the video element. Captions and audio descriptions would typically be
+          included for accessibility.
+        </figcaption>
+      </figure>
+    </section>
+  </body>
+</html>
+`
