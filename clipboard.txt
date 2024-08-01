@@ -8,6 +8,16 @@
 
 - vimeo
 
+- AJ's Accessible site 
+
+- get content from DALL-E 
+
+- use faker to fill the content
+
+- use Github pages 
+
+
+
 ===============
 
 

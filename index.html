@@ -1,77 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AJ's Accessibly Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js" defer></script>
-   </head> 
-   <body>
+  </head>
+  <body>
     <header>
-        <h1> AJ's Accessible Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <h1>AJ's Accessible Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <!-- Main  -->
     <main>
-        <section id="home">
-            <h2>Welcome to Our Accessible Site</h2>
-            <p>We are committed to making our website accessible to everyone, including users with cognitive disabilities.</p>
-        </section>
+      <section id="home">
+        <h2>Welcome to Our Accessible Site</h2>
+        <p>
+          We are committed to making our website accessible to everyone,
+          including users with cognitive disabilities.
+        </p>
+      </section>
 
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          Our mission is to create an inclusive web experience for all users.
+        </p>
+      </section>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Our mission is to create an inclusive web experience for all users.</p>
-        </section>
+      <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Service 1: Description of service 1.</li>
+          <li>Service 2: Description of service 2.</li>
+          <li>Service 3: Description of service 3.</li>
+        </ul>
+      </section>
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Service 1: Description of service 1.</li>
-                <li>Service 2: Description of service 2.</li>
-                <li>Service 3: Description of service 3.</li>
-            </ul>
-        </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea
+            name="message"
+            id="message"
+            required
+            cols="30"
+            rows="10"
+          ></textarea>
 
-                <label for="message">Message:</label>
-                <textarea name="message" id="message" required cols="30" rows="10"></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-
-
+          <button type="submit">Submit</button>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 AJ's Accessible Website</p>
+      <p>&copy; 2024 AJ's Accessible Website</p>
     </footer>
-    
+
     <!-- Accessibility Tools Widget -->
     <div class="accesibility-widget">
-        <button id="toggle-dark-mode">Toggle Dark Mode</button>
-        <button id="increase-text-size">Increase Text Size</button>
-        <button id="toggle-high-contrast">High Contrast Mode</button>
-        <button id="highlight-links">Highlight Links</button>
+      <button id="toggle-dark-mode">Toggle Dark Mode</button>
+      <button id="increase-text-size">Increase Text Size</button>
+      <button id="toggle-high-contrast">High Contrast Mode</button>
+      <button id="highlight-links">Highlight Links</button>
     </div>
-   </body>
+  </body>
 </html>
