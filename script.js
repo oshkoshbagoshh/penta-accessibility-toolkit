@@ -73,5 +73,10 @@ $(document).ready(function () {
   // Toggle Accessibility Widget
   $("#toggle-widget").click(function () {
     $(".accessibility-widget").toggleClass("show");
+    if ($(".accessibility-widget").hasClass("show")) {
+      $(this).text("Hide Accessibility Tools");
+    } else {
+      $(this).text("Accessibility Tools");
+    }
   });
 });

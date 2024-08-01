@@ -21,8 +21,7 @@ body.dark-mode {
   color: #ffffff;
 }
 
-body.dark-mode header,
-body.dark-mode footer {
+body.dark-mode header, body.dark-mode footer {
   background-color: #333;
 }
 
@@ -85,8 +84,7 @@ h2 {
   padding-bottom: 5px;
 }
 
-p,
-ul {
+p, ul {
   margin-bottom: 20px;
 }
 
@@ -103,8 +101,7 @@ label {
   margin-bottom: 5px;
 }
 
-input,
-textarea {
+input, textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -141,7 +138,7 @@ footer {
   right: 10px;
   display: none;
   background: #333;
-  color: #80f0e7;
+  color: #fff;
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -186,49 +183,46 @@ footer {
   position: fixed;
   bottom: 10px;
   right: 10px;
-}
-
-.accessibility-toggle button {
   background: #333;
   color: #fff;
   border: none;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 1000; /* Make sure it's above the widget */
 }
 
-.accessibility-toggle button:hover {
+.accessibility-toggle:hover {
   background: #555;
 }
 
 /* Show Accessibility Widget */
 .accessibility-widget.show {
-  right: 10px; /* Enter the viewport */
+  right: 60px; /* Enter the viewport */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
-    padding: 10px;
+      padding: 10px;
   }
 
-  header,
-  footer {
-    padding: 10px;
+  header, footer {
+      padding: 10px;
   }
 
   nav ul {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
   }
 
   nav ul li {
-    margin-bottom: 10px;
+      margin-bottom: 10px;
   }
 
   .accessibility-widget {
-    width: 90%;
-    left: 5%;
-    right: 5%;
+      width: 90%;
+      left: 5%;
+      right: 5%;
   }
 }
