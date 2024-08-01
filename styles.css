@@ -1,167 +1,234 @@
 /* Basic Reset */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Body Styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  font-size: 16px; /* Default text size */
 }
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-
+  background-color: #121212;
+  color: #ffffff;
 }
 
-
-body.dark-mode header, body.dark-mode footer {
-    background-color: #333;
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #333;
 }
-
 
 /* High Contrast Mode */
 body.high-contrast {
-    background-color: #000;
-    color: #fff;
+  background-color: #000;
+  color: #fff;
 }
 
 body.high-contrast a {
-    color: #ff0;
+  color: #ff0;
 }
 
 /* Header Styling */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
 }
 
 header h1 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
-/* Highlight links */
+
+/* Highlight Links */
 body.highlight-links a {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 /* Main Content Styling */
 main {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 section {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 h2 {
-    border-bottom: 2px solid #333;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+  border-bottom: 2px solid #333;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 
-p, ul {
-    margin-bottom: 20px;
+p,
+ul {
+  margin-bottom: 20px;
 }
 
 /* Form Styling */
 form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-
-
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-
 
 button {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-    background: #555;
+  background: #555;
 }
 
 /* Footer Styling */
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
 
+/* Scroll to Top Button */
+#scrollToTop {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  display: none;
+  background: #333;
+  color: #80f0e7;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#scrollToTop:hover {
+  background: #555;
 }
 
 /* Accessibility Widget Styling */
-.accesibility-widget {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.accessibility-widget {
+  position: fixed;
+  bottom: 10px;
+  right: -250px; /* Hidden to the side */
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
 }
 
-.accesibility-widget button {
-    display: block;
-    margin-bottom: 10px;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background: #333;
-    color: #fff;
+.accessibility-widget button {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
 }
-
 
 .accessibility-widget button:hover {
-    background: #555;
+  background: #555;
+}
+
+/* Toggle Button for Accessibility Widget */
+.accessibility-toggle {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.accessibility-toggle button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.accessibility-toggle button:hover {
+  background: #555;
+}
+
+/* Show Accessibility Widget */
+.accessibility-widget.show {
+  right: 10px; /* Enter the viewport */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header,
+  footer {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .accessibility-widget {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
 }

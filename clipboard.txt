@@ -16,8 +16,22 @@
 
 - use Github pages 
 
-
+- TODO: ARIA roles, alt text for images
 
 ===============
 
+Number	Item	Description	Roles
+1	Set the viewport	meta viewport tag	
+2	liquid layout	use percentages, not actual hard coded values	
+3	flex layout	Flex-box	
+4	adaptive layout	media queries	
+5	responsive images	Max-height: 100%, height: auto	
+6	responsive typography	font sizes and verticla measures should us relative units (em , rem) rather than fixed-size pixels(px). That way it’s relative and it’ll flow on different screen sizes	
+7	Alt tags for all images	<img alt=”here’s a description”>	
+8	Add an ARIA label to all form fields	add the aria-label attribute to <input>, <select>, or <textarea> for screen readers	
+9	Add a labelfor all form fields	use label for to referene the id of the corresepoding field	
+10	use heading hierarchically (only one h1)	H1 >> H2 >> H3 >>> h4 >> h5 >> h6	
+11	semantic HTML5 page tags 	header, nav, main, article, section, aside, footer. These are landmarks as they help assistive technologies make sense of your web app. They should have ARIA role attributes as follows	<header role=”banner”> <nav  role=”navigation”> <main role=”main”> <article role=”contentinfo”> <section role=”contentinfo”> <aside role=”complementary”> <aside role=”note”> <footer role=”contentinfo”> 
+12	Add ARIA roles to non-semantic elements	» Add ARIA roles to non-semantic elements. If your app uses non-semantic elements, such as a Query Ul or jQuery Mobile widget, you can alert assistive technologies to what the widget does by adding the role attribute and setting it equal to the widget's function in the app. Some example role values are dialog, menu, menubar, progressbar, scrollbar, slider, tab, tablist, tabpane1, and toolbar. For example, here's how you'd add the various tab-related roles to Query Ul's Tabs widget: ‹div id="my-tabs"> ‹ul role="tablist"› <1i>‹a href="#my-tab-1" role="tab">This</a></11> ‹ 1i><a href="#ny-tab-2" role="tab"›That</a›‹/1i› ‹ 11›‹a href="#my-tab-3" role="tab">The Other </a>‹/li> </ul> ‹div id="my-tab-1" role="tabpanel", This is the first tab's content. ‹/div> <div id="my-tab-2" role="tabpanel"> This is the second tab's content. ‹/div> ‹div id="my-tab-3" role="tabpanel"› Yep, this is the third tab's content. ‹/div› ‹/div> See Mozilla Developer Network's Using ARIA page at https: //developer. mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques to see a complete list of ARIA roles. » Ensure your app's colors have sufficient contrast. If text colors too closely match the background color, the text will be hard to decipher, particularly for the visually impaired. Once your app is on the web, you can check its accessibility by heading over tr the Web Accessibility Evaluation Tool (WAVE) at http://wave.webaim.org. Past your web app's address into the text box and press Enter/Return to see a report.	
+13	Ensure colors have sufficient contrast	If text colors too closely match the background color, the text will be hard to decipher, for visually impaired (10% of people are color blind)	
 
