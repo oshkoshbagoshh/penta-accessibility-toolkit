@@ -15,5 +15,8 @@
     "ethicall"
   ],
   "author": "AJ Javadi",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^23.1.1"
+  }
 }
