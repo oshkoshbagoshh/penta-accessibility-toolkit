@@ -17,6 +17,8 @@
 - use Github pages 
 
 - TODO: ARIA roles, alt text for images
+- Zoho Site custom code 
+
 
 ===============
 
