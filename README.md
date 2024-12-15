@@ -54,7 +54,8 @@ code .
 - HTML
 - CSS
 - JavaScript
-- React (coming soon)
+- VueJS Compnents(coming soon)
+- Tailwind
 - Python (coming soon)
 
 ## Contributing
