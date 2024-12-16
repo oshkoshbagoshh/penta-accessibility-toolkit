@@ -56,7 +56,7 @@ code .
 - JavaScript
 - VueJS Compnents(coming soon)
 - Tailwind
-- Python (coming soon)
+- Auditing accessibility with Lighthouse, WAVE
 
 ## Contributing
 
@@ -65,8 +65,8 @@ code .
 The project is licensed under the MIT license.
 
 ### Contact
-- collaboration is welcome.
+- I want you to know that collaboration is welcome.
 - amirjavadi25@gmail.com
 - https://www.pentecost.ai/contact
-- 
+
 
